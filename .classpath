@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk_1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="conf"/>
+	<classpathentry kind="lib" path="jar/MbizTable.jar"/>
+	<classpathentry kind="lib" path="jar/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="jar/h2-1.4.200.jar"/>
+	<classpathentry kind="lib" path="jar/mybatis-3.5.0.jar"/>
+	<classpathentry kind="lib" path="jar/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="jar/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="jar/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="jar/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="jar/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="jar/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="jar/ooxml-lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="jar/ooxml-lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="jar/ooxml-lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+
+	<properties resource="SqlMapConfig.properties"/>
+		
+
+
+
+	<!-- DB와의 연결을 처리하는 부분 SqlMapConfig.properties에 설정해 놓은 정보를 이용하여 구성한다. -->
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+
+
+
+	<!-- 실행할 SQL문을 정의한 Mapper XML의 경로를 지정한다. -->
+	<mappers>
+		<!-- 이 위치에서 다음의 형식으로 Mapper 파일의 경로를 지정한다. <mapper resource="Mapper 파일 경로" 
+			/> -->
+			<mapper resource="test/TestXml.xml"/>
+			<mapper resource="net/metabiz/addressbook/net/db/Group.xml"/>
+			<mapper resource="net/metabiz/addressbook/net/db/User.xml"/>
+	</mappers>
+
+
+
+</configuration>
+
+
+
+
+
+

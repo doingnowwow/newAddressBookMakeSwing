@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="group">
+     
+    <select id="selectGroupAll" resultType="net.metabiz.addressbook.data.GroupData" >
+        SELECT
+            GROUP_NO,GROUP_NAME
+        FROM ED_GROUP
+    </select>
+    
+    <insert id="insertGroup" parameterType="net.metabiz.addressbook.data.GroupData" >
+    
+    	INSERT INTO ED_GROUP VALUES(#{group_no},#{group_name})
+    </insert>
+    
+    <update id="updateGroup" parameterType="net.metabiz.addressbook.data.GroupData" >
+    	UPDATE ED_GROUP
+    	SET
+    	GROUP_NAME = #{group_name}
+    	WHERE GROUP_NO = #{group_no}
+    </update>
+    
+    <delete id="deleteGroup" parameterType="net.metabiz.addressbook.data.GroupData">
+    	DELETE FROM ED_GROUP WHERE GROUP_NO=#{group_no};
+    </delete>
+ 
+ <delete id="delteTable" >
+		DELETE FROM ED_GROUP
+	</delete>
+	
+     
+</mapper>

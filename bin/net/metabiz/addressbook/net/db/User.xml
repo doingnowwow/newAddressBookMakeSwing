@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+
+	<select id="selectUserAll"
+		resultType="net.metabiz.addressbook.data.UserData" >
+		SELECT
+			AD_NO
+			,AD_NAME
+			,AD_HP
+			,AD_MAIL
+			,AD_COM
+			,AD_DEPARTMENT
+			,AD_POSITION
+			,AD_MEMO
+			,GROUP_NO
+		FROM ED_USER
+	</select>
+
+	<insert id="insertUser"
+		parameterType="net.metabiz.addressbook.data.UserData">
+
+		INSERT INTO ED_USER VALUES(
+			#{ad_no}
+			,#{ad_name}
+			,#{ad_hp}
+			,#{ad_mail}
+			,#{ad_com}
+			,#{ad_department}
+			,#{ad_position}
+			,#{group_no}
+			,#{ad_memo})
+	</insert>
+
+	<update id="updateUser"
+		parameterType="net.metabiz.addressbook.data.UserData">
+		UPDATE ED_USER
+		SET
+			AD_NAME = #{ad_name}
+			,AD_HP = #{ad_hp}
+			,AD_MAIL = #{ad_mail}
+			,AD_COM = #{ad_com}
+			,AD_DEPARTMENT = #{ad_department}
+			,AD_POSITION = #{ad_position}
+			,AD_MEMO = #{ad_memo}
+			,GROUP_NO = #{group_no}
+		WHERE
+		AD_NO = #{ad_no}
+	</update>
+
+	<delete id="deleteUser"
+		parameterType="net.metabiz.addressbook.data.UserData">
+		DELETE FROM ED_USER WHERE AD_NO=#{ad_no};
+	</delete>
+	
+	<delete id="delteTable" >
+		DELETE FROM ED_USER
+	</delete>
+	
+	
+
+
+</mapper>
